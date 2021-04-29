@@ -2,7 +2,7 @@
 
 /* Variables CSS*/
 :root{
-    --header-height: 3rm;
+    --header-height: 3rem;
     /* Colors */
     --first-color:#069C54;
     --first-color-alt:#048654;
@@ -61,7 +61,7 @@ html{
 }
 
 body{
-    margin: var(--header-height)0 0 0;
+    margin: var(--header-height) 0 0 0;
     font-family: var(--body-font);
     font-size: var(--normal-font-size);
     background-color: var(--body-color);
@@ -144,13 +144,61 @@ img{
 }
 
 @media screen and (max-width:768px){
-
+    .nav__menu{
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        padding: 1.5rem 0 1rem;
+        text-align: center;
+        background-color: var(--body-color);
+        transition: .4s;
+        box-shadow: 0 4px 4px rgba(0,0,0,.1);
+        border-radius: 0,0,1rem,1rem;
+        z-index: var(--z-fixed);
+    }
 }
+
+.nav__item{
+    margin-bottom: var(--mb-2);
+}
+
+.nav__link, .nav__logo, .nav__toggle{
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo:hover{
+    color: var(--first-color);
+}
+
+.nav__link{
+    transition: 3s;
+}
+
+.nav__link:hover{
+    color: var(--first-color);
+}
+
+.nav__toggle{
+    font-size: 1.3rem;
+    cursor: pointer
+}
+
 /* Show Menu */
+.show-menu{
+    top: var(--header-height)
+}
 
 /* Active Menu */
+.active-link{
+    color: var(--first-color)
+}
 
 /* Change Background Header */
+.scroll-header{
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
 
 /* Scroll Top */
 
